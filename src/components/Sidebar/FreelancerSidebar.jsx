@@ -8,7 +8,7 @@ export default function FreelancerSidebar() {
         <li><Link to="/freelancer/projects" className="block hover:underline">Browse Projects</Link></li>
         <li><Link to="/freelancer/tasks" className="block hover:underline">My Tasks</Link></li>
         <li><Link to="/task-progress" className="block hover:underline">Task Progress</Link></li>
-        <li><Link to="/freelancer/earnings" className="block hover:underline">My Earnings</Link></li>
+        {/* <li><Link to="/freelancer/earnings" className="block hover:underline">My Earnings</Link></li> */}
       </ul>
     </aside>
   );

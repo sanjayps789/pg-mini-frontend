@@ -156,6 +156,7 @@ export default function FreelancerDashboard() {
         setProfile(res.data);
         toast.success('Profile picture updated!');
       } catch (err) {
+        console.log("Profile picture upload error:", err);
         toast.error('Failed to upload profile picture.');
       }
     }
@@ -180,11 +181,11 @@ export default function FreelancerDashboard() {
               <div className="mt-3 flex flex-wrap gap-2">{profile?.skills.map(skill => (<span key={skill} className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">{skill}</span>))}</div>
             </div>
           </div>
-          <div className="text-center sm:text-right">
+          {/* <div className="text-center sm:text-right">
             <div className="text-gray-500">Earnings</div>
             <div className="text-xl font-bold">${earnings.toLocaleString()}</div>
             <button onClick={() => setIsEditModalOpen(true)} className="mt-2 flex items-center justify-center sm:justify-end text-indigo-600 hover:underline"><FaEdit className="mr-1" /> Edit Profile</button>
-          </div>
+          </div> */}
         </div>
         <div className="bg-white rounded-xl shadow-md p-6 flex-1 flex flex-col">
           <div className="flex justify-between items-center mb-4">
@@ -235,7 +236,7 @@ export default function FreelancerDashboard() {
           <div className="mt-4 text-sm text-gray-600 space-y-3">
             <div className="flex justify-between"><span>Proposals Sent</span><strong>{proposals.length}</strong></div>
             <div className="flex justify-between"><span>Active Projects</span><strong>{activeProjects.length}</strong></div>
-            <div className="flex justify-between"><span>Earnings</span><strong>${earnings.toLocaleString()}</strong></div>
+            {/* <div className="flex justify-between"><span>Earnings</span><strong>${earnings.toLocaleString()}</strong></div> */}
             <div className="flex justify-between"><span>Client Rating</span><strong>{profile?.rating || 0}/5</strong></div>
           </div>
         </div>
@@ -279,7 +280,7 @@ export default function FreelancerDashboard() {
           <NavLink to="/freelancer/my-contracts" className={({isActive}) => `flex items-center px-4 py-2.5 rounded-lg ${isActive ? 'bg-indigo-100 text-gray-700 font-semibold' : 'text-gray-600 hover:bg-indigo-50'}`}><FaFileContract className="mr-3 h-5 w-5" /> My Contracts</NavLink>
           <NavLink to="/freelancer/tasks" className={({isActive}) => `flex items-center px-4 py-2.5 rounded-lg ${isActive ? 'bg-indigo-100 text-gray-700 font-semibold' : 'text-gray-600 hover:bg-indigo-50'}`}><FaTasks className="mr-3 h-5 w-5" /> Task Progress</NavLink>
           <NavLink to="/messages" className={({isActive}) => `flex items-center px-4 py-2.5 rounded-lg ${isActive ? 'bg-indigo-100 text-gray-700 font-semibold' : 'text-gray-600 hover:bg-indigo-50'}`}><FaEnvelope className="mr-3 h-5 w-5" /> Messages</NavLink>
-          <NavLink to="/freelancer/earnings" className={({isActive}) => `flex items-center px-4 py-2.5 rounded-lg ${isActive ? 'bg-indigo-100 text-gray-700 font-semibold' : 'text-gray-600 hover:bg-indigo-50'}`}><FaMoneyBill className="mr-3 h-5 w-5" /> Earnings</NavLink>
+          {/* <NavLink to="/freelancer/earnings" className={({isActive}) => `flex items-center px-4 py-2.5 rounded-lg ${isActive ? 'bg-indigo-100 text-gray-700 font-semibold' : 'text-gray-600 hover:bg-indigo-50'}`}><FaMoneyBill className="mr-3 h-5 w-5" /> Earnings</NavLink> */}
           <NavLink to="/freelancer/rate-user" className={({isActive}) => `flex items-center px-4 py-2.5 rounded-lg ${isActive ? 'bg-indigo-100 text-gray-700 font-semibold' : 'text-gray-600 hover:bg-indigo-50'}`}><FaStar className="mr-3 h-5 w-5" /> Rate a Client</NavLink>
           <NavLink to="/reviews" className={({isActive}) => `flex items-center px-4 py-2.5 rounded-lg ${isActive ? 'bg-indigo-100 text-gray-700 font-semibold' : 'text-gray-600 hover:bg-indigo-50'}`}><FaStar className="mr-3 h-5 w-5" /> My Reviews</NavLink>
           <NavLink to="/freelancer/settings" className={({isActive}) => `flex items-center px-4 py-2.5 rounded-lg ${isActive ? 'bg-indigo-100 text-gray-700 font-semibold' : 'text-gray-600 hover:bg-indigo-50'}`}><FaCog className="mr-3 h-5 w-5" /> Settings</NavLink>
