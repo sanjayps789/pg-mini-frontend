@@ -1,25 +1,27 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
-import io from 'socket.io-client';
+import React, { createContext, useContext, useEffect, useState } from "react";
+import io from "socket.io-client";
 
 const SocketContext = createContext();
-
-export const useSocket = () => {
-  return useContext(SocketContext);
-};
+export const useSocket = () => useContext(SocketContext);
 
 export const SocketProvider = ({ children }) => {
   const [socket, setSocket] = useState(null);
 
   useEffect(() => {
-    const newSocket =io({
+    // ✅ Replace with your backend base URL
+    const newSocket = io("http://localhost:8000", {
+      transports: ["websocket"], // prevent polling flicker
+      reconnectionAttempts: 5, // optional: retry limit
       auth: {
-        token: localStorage.getItem('token')
-      }
+        token: localStorage.getItem("token"),
+      },
     });
 
     setSocket(newSocket);
 
-    return () => newSocket.close();
+    return () => {
+      newSocket.disconnect();
+    };
   }, []);
 
   return (
