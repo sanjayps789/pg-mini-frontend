@@ -50,22 +50,22 @@ export default function LandingPage() {
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-12">How It Works</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center p-6 bg-gray-50 rounded-lg shadow-sm">
+            <div className="text-center p-6 bg-gray-50 rounded-lg shadow-md border border-gray-200 ">
               <FaLaptopCode className="text-4xl text-indigo-500 mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">Post a Project</h3>
               <p className="text-gray-600">Clients can easily post project details, budget, and requirements for freelancers to see.</p>
             </div>
-            <div className="text-center p-6 bg-gray-50 rounded-lg shadow-sm">
+            <div className="text-center p-6 bg-gray-50 rounded-lg shadow-md border border-gray-200 ">
               <FaHandshake className="text-4xl text-indigo-500 mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">Find Your Match</h3>
               <p className="text-gray-600">Freelancers can browse projects and submit proposals to showcase their skills.</p>
             </div>
-            <div className="text-center p-6 bg-gray-50 rounded-lg shadow-sm">
+            <div className="text-center p-6 bg-gray-50 rounded-lg shadow-md border border-gray-200 ">
               <FaRocket className="text-4xl text-indigo-500 mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">Collaborate Effortlessly</h3>
               <p className="text-gray-600">Use our dedicated workspace for real-time chat, task management, and file sharing.</p>
             </div>
-            <div className="text-center p-6 bg-gray-50 rounded-lg shadow-sm">
+            <div className="text-center p-6 bg-gray-50 rounded-lg shadow-md border border-gray-200 ">
               <FaMoneyCheckAlt className="text-4xl text-indigo-500 mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">Secure Payments</h3>
               <p className="text-gray-600">Manage invoices and payments seamlessly through our integrated (mock) system.</p>
