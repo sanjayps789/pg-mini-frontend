@@ -160,6 +160,7 @@ const ProjectCollab = () => {
             const messagePayload = { project: projectId, content: newMessageContent };
             await createMessage(messagePayload);
             setNewMessageContent('');
+            fetchData();
         } catch (error) {
             toast.error('Failed to send message.');
         }
