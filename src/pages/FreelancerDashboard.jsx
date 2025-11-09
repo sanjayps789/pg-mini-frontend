@@ -17,6 +17,7 @@ import {
   FaEdit,
   FaBars,
   FaTasks,
+  FaCheck,
 } from "react-icons/fa";
 import { getProjects } from "../services/projectService";
 import {
@@ -373,9 +374,10 @@ export default function FreelancerDashboard() {
                             <div className="flex flex-col sm:flex-row gap-2">
                               <button
                                 disabled
-                                className="flex-1 bg-gray-300 text-gray-700 py-2 rounded-lg font-medium"
+                                className="font-medium text-green-700"
                               >
-                                Proposal Sent
+                                Proposal Sented
+                                <FaCheck className="ml-2 inline-block" />
                               </button>
                               <button
                                 onClick={() =>
