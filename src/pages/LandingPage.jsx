@@ -65,11 +65,11 @@ export default function LandingPage() {
               <h3 className="text-xl font-semibold mb-2">Collaborate Effortlessly</h3>
               <p className="text-gray-600">Use our dedicated workspace for real-time chat, task management, and file sharing.</p>
             </div>
-            <div className="text-center p-6 bg-gray-50 rounded-lg shadow-md border border-gray-200 ">
+            {/* <div className="text-center p-6 bg-gray-50 rounded-lg shadow-md border border-gray-200 ">
               <FaMoneyCheckAlt className="text-4xl text-indigo-500 mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">Secure Payments</h3>
               <p className="text-gray-600">Manage invoices and payments seamlessly through our integrated (mock) system.</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

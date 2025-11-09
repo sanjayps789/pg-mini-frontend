@@ -318,7 +318,7 @@ export default function ClientPayment() {
                     Back to Dashboard
                 </Link>
             </div>
-            <h1 className="text-3xl font-bold mb-6 text-gray-900">Client Payments</h1>
+            {/* <h1 className="text-3xl font-bold mb-6 text-gray-900">Client Payments</h1> */}
             {renderContent()}
         </div>
       </div>
